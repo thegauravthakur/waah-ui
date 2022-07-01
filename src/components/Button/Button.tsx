@@ -1,13 +1,32 @@
-import React from "react";
-import './Button.css';
+import styled from '@emotion/styled';
+import React, {ButtonHTMLAttributes, forwardRef, HTMLProps} from 'react';
 
-interface ButtonProps {
-    type: 'button' | 'submit' | 'reset';
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
-export function Button({type}: ButtonProps) {
-    return (
-        <button type={type}>
-            hey
-        </button>
-    )
-}
+
+const StyledButton = styled.button`
+  background-color: rgb(0, 112, 243);
+  outline: 1px solid rgb(0, 112, 243);
+  color: white;
+  border: none;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+
+  &:hover {
+    background-color: white;
+    color: rgb(0, 112, 243);
+    cursor: pointer;
+  }
+`;
+
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+    (props, ref) => (
+        <StyledButton
+            {...props}
+            ref={ref}
+        />
+    ),
+);
+
