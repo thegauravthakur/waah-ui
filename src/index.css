@@ -2,6 +2,7 @@
     :root {
         --color-text: hsl(222deg, 22%, 5%);
         --color-background: hsl(0deg, 0%, 100%);
+        --color-border: hsl(0deg, 0%, 75%);
         --color-primary: hsl(245deg, 100%, 60%);
         --color-secondary: hsl(333deg, 100%, 45%);
         --color-info: hsl(245deg, 100%, 60%);

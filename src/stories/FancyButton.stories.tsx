@@ -13,7 +13,5 @@ const Template: ComponentStory<typeof FancyButton> = (args) => (
 
 export const Button = Template.bind({});
 Button.args = {
-    children: 'Fancy Button',
-    href: '#',
-    style: { width: 200 },
+    children: 'Hey yoo',
 };

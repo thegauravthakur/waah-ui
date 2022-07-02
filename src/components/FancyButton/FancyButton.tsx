@@ -1,23 +1,15 @@
-import React, { ForwardedRef, forwardRef, HTMLAttributes } from 'react';
+import React, { HTMLAttributes } from 'react';
 import './FancyButton.css';
 
-export interface ButtonProps extends HTMLAttributes<HTMLElement> {
-    href?: string;
+export interface FancyButtonProps extends HTMLAttributes<HTMLElement> {
+    href: string;
+    children: string;
 }
 
-export const FancyButton = forwardRef<
-    HTMLButtonElement | HTMLAnchorElement,
-    ButtonProps
->(({ className, href, ...props }, ref) => {
+export function FancyButton({ className, href, ...rest }: FancyButtonProps) {
     const classes = className
         ? 'fancy-button ' + className.trim()
         : 'fancy-button';
-    if (href) return <a {...props} className={classes} href={href} />;
-    return (
-        <button
-            className={classes}
-            {...props}
-            ref={ref as ForwardedRef<HTMLButtonElement>}
-        />
-    );
-});
+    if (href) return <a className={classes} {...rest} />;
+    return <button className={classes} {...rest} />;
+}
