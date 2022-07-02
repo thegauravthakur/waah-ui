@@ -1,7 +1,7 @@
 {
   "name": "@gauravcodes/waah-ui",
   "description": "A react component library",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "private": false,
   "author": "Gaurav Thakur",
   "license": "MIT",
