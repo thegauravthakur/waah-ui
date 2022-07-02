@@ -8,6 +8,9 @@
     border-radius: 7px;
     transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .fancy-button:hover {
